@@ -1,6 +1,9 @@
 class PolyTreeNode
-    attr_reader :value, :parent
-    attr_accessor :children
+    
+    attr_accessor :children, :parent, :value, 
+    def inspect
+        {'value' => @value, 'parent_value' => @parent.value }.inspect
+    end
 
     def initialize(value)
         @value = value
